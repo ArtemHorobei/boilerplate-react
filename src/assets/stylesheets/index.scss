@@ -1,0 +1,30 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  font-size: 14px;
+  min-width: 300px;
+  overflow-x: auto;
+  overflow-y: scroll;
+
+  &,
+  * {
+    letter-spacing: 0.3px;
+  }
+
+  #root {
+    height: 100%;
+    width: 100%;
+  }
+}
