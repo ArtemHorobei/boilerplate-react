@@ -82,6 +82,10 @@ module.exports = {
   appNodeModules: resolveApp('node_modules'),
   publicUrl: getPublicUrl(resolveApp('package.json')),
   servedPath: getServedPath(resolveApp('package.json')),
+  globalIndexSass: resolveApp('src/assets/stylesheets/index.scss'),
+  globalSass: resolveApp('src/assets/stylesheets/globals/index.scss'),
+  semanticDistCss: resolveApp('semantic/dist'),
+  mghUiKit: resolveApp('src/components/ui-kit')
 };
 
 

@@ -71,9 +71,27 @@
     "workbox-webpack-plugin": "3.6.3"
   },
   "scripts": {
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "start": "yarn run semantic:build && yarn run webpack:start",
+    "build": "yarn run test && yarn run lint:js && yarn run lint:css && yarn run semantic:build && yarn run webpack:build",
+    "test": "npx jest",
+    "test-watch": "node scripts/test.js",
+    "lint": "yarn run lint:css & yarn run lint:js",
+    "lint:js": "npx eslint . --ext .js --ext .jsx",
+    "lint:js:fix": "npx eslint . --ext .js --ext .jsx --fix",
+    "lint:css": "npx stylelint **/*.scss",
+    "lint:css:fix": "npx stylelint **/*.scss --fix",
+    "styleguide": "npx styleguidist server",
+    "licences": "npx license-checker > licenses.txt",
+    "licences:summary": "npx license-checker --summary > licenses.txt",
+    "ui-kit:build": "yarn --cwd=node_modules/mgh-ui-kit install && yarn --cwd=node_modules/mgh-ui-kit build",
+    "ui-kit:upgrade": "yarn upgrade mgh-react-ui-kit",
+    "ui-kit:upgrade-build": "yarn run ui-kit:upgrade && ui-kit:build",
+    "semantic:build": "yarn run semantic:build-css --quiet && yarn run semantic:build-assets --quiet",
+    "semantic:build-css": "npx gulp build-css --gulpfile=semantic-ui/gulpfile.js",
+    "semantic:build-assets": "npx gulp build-assets --gulpfile=semantic-ui/gulpfile.js",
+    "webpack:start": "node scripts/start.js",
+    "webpack:build": "node scripts/build.js",
+    "webpack:build:analyze": "yarn run semantic:build && ANALYZE_BUNDLE=true yarn run webpack:build"
   },
   "eslintConfig": {
     "extends": "react-app"
