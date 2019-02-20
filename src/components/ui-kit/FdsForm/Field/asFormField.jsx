@@ -1,7 +1,7 @@
 import React from 'react';
 import { Field } from 'redux-form';
 import { isRequired } from './commonValidators';
-import MghForm from '../index';
+import FdsForm from '../../FdsForm';
 import ErrorCaption from './ErrorCaption';
 
 const asFormField = ({
@@ -69,7 +69,7 @@ const asFormField = ({
       : null;
 
     return (
-      <MghForm.Field
+      <FdsForm.Field
         error={!!visibleError}
       >
         {!labelOnControl && (
@@ -100,7 +100,7 @@ const asFormField = ({
             message={meta && meta.error}
           />
         )}
-      </MghForm.Field>
+      </FdsForm.Field>
     );
   }
 };
