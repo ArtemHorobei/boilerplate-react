@@ -7,6 +7,9 @@ import { reducer as modal } from 'redux-modal';
 // import intl from '../modules/intl';
 // import support from '../modules/support';
 
-const reducers = combineReducers({});
+const reducers = combineReducers({
+  modal,
+  form,
+});
 
 export default reducers;

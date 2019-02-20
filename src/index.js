@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import AppRoot from './app/containers/AppRoot';
-import * as serviceWorker from './serviceWorker';
+import { runRootSaga } from './app/store';
+
+runRootSaga();
 
 ReactDOM.render(<AppRoot />, document.getElementById('root'));
-
-serviceWorker.unregister();
