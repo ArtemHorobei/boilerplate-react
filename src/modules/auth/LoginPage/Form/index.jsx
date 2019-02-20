@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { reduxForm } from 'redux-form';
 import cns from 'classnames';
-import { Input } from 'semantic-ui-react';
-import { Field } from 'redux-form';
+
+import FdsForm from '../../../../components/ui-kit/FdsForm';
 
 import cnNsp from './styles.module.scss';
 
@@ -27,32 +27,26 @@ class LoginForm extends React.Component {
 
     return (
         <div className={cn}>
-            <form action="">
-                <div>
-                    <label>Email</label>
-                    <div>
-                        <Field
-                            name="email"
-                            component="input"
-                            type="text"
-                            placeholder="Email"
-                            label="Email"
-                        />
-                    </div>
-                </div>
-                <div>
-                    <label>Password</label>
-                    <div>
-                        <Field
-                            name="password"
-                            component="input"
-                            type="text"
-                            placeholder="Password"
-                            label="Password"
-                        />
-                    </div>
-                </div>
-            </form>
+            <FdsForm>
+
+                <FdsForm.Field.Email
+                    label="Email"
+                    name="email"
+                    placeholder="Enter your email"
+                    customControlProps={{
+                        input: { autoFocus: true },
+                    }}
+                    required
+                />
+
+                <FdsForm.Field.Password
+                    label="Password"
+                    name="password"
+                    placeholder="Enter your password"
+                    required
+                />
+
+            </FdsForm>
         </div>
     )
   }

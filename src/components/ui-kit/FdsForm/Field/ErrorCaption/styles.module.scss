@@ -1,0 +1,25 @@
+._root {
+  align-items: end;
+  display: flex;
+  padding: {
+    top: converttoem(4);
+  }
+}
+
+.__hidden {
+  opacity: 0;
+
+  ._message {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+
+._icon {
+  color: red;
+  display: flex;
+}
+
+._message {
+  color: red;
+}
