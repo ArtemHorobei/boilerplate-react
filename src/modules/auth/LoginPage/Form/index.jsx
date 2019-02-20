@@ -22,13 +22,13 @@ class LoginForm extends React.Component {
   };
 
   render () {
-    const { className } = this.props;
+    const { className, valid, pristine, handleSubmit } = this.props;
 
     const cn = cns(className, cnNsp._root);
 
     return (
         <div className={cn}>
-            <FdsForm>
+            <FdsForm loading={false} onSubmit={handleSubmit}>
 
                 <FdsForm.Field.Email
                     label="Email"
@@ -47,7 +47,11 @@ class LoginForm extends React.Component {
                     required
                 />
 
-                <FdsButton>LOGIN</FdsButton>
+                <FdsButton
+                    disabled={!valid || pristine}
+                >
+                    LOGIN
+                </FdsButton>
 
             </FdsForm>
         </div>
