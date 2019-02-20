@@ -1,4 +1,5 @@
 @import '../../../semantic-ui/dist/semantic.css';
+@import './globals/index';
 
 *,
 *::after,
@@ -15,7 +16,7 @@ body {
 }
 
 body {
-  font-size: 14px;
+  font-size: $fontSize14;
   min-width: 300px;
   overflow-x: auto;
   overflow-y: scroll;

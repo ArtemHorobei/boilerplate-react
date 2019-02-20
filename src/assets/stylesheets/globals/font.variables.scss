@@ -1,0 +1,23 @@
+@import "functions";
+
+$emBase: 14;
+$fontSizeBase: #{$emBase}px;
+
+$fontWeight100: 100;
+$fontWeightNormal: normal;
+$fontWeight500: 500;
+
+$fontPrimary: Roboto, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+$fontSecondary: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+
+$fontSize12: converttoem(12);
+$fontSize14: converttoem(14);
+$fontSize16: converttoem(16);
+$fontSize20: converttoem(20);
+$fontSize22: converttoem(22);
+$fontSize24: converttoem(24);
+
+$padding40: converttoem(40);
+
+$borderRad4: 4px;
+$borderRad8: 8px;

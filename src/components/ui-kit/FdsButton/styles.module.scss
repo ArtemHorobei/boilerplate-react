@@ -1,0 +1,58 @@
+@import '../../../assets/stylesheets/globals/index';
+
+:global(.ui.button),
+:global(.ui.buttons .button) {
+  &._root {
+    &,
+    &:global(.basic) {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      text-transform: uppercase;
+    }
+
+    font-weight: $fontWeight500;
+
+    &.__link {
+      &,
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: transparent;
+        box-shadow: none;
+      }
+
+      &:global(.primary) {
+        color: $colorPrimary;
+
+        &:hover,
+        &:focus {
+          color: $colorPrimaryHover;
+        }
+
+        &:active {
+          color: $colorPrimaryActive;
+        }
+      }
+
+      &:global(.disabled) {
+        background-color: transparent !important;
+      }
+    }
+
+    &.__textLink {
+      font-weight: inherit;
+      overflow: visible;
+      padding: 0;
+      text-transform: none;
+    }
+  }
+}
+
+.__wrap {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}

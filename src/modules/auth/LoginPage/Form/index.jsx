@@ -4,6 +4,7 @@ import { reduxForm } from 'redux-form';
 import cns from 'classnames';
 
 import FdsForm from '../../../../components/ui-kit/FdsForm';
+import FdsButton from '../../../../components/ui-kit/FdsButton';
 
 import cnNsp from './styles.module.scss';
 
@@ -45,6 +46,8 @@ class LoginForm extends React.Component {
                     placeholder="Enter your password"
                     required
                 />
+
+                <FdsButton>LOGIN</FdsButton>
 
             </FdsForm>
         </div>
