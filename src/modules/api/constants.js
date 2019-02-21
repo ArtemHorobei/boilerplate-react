@@ -15,30 +15,8 @@ export const SORTING_DIRECTION = {
 };
 
 export const API_ENDPOTINT = {
-  DELIVERY_ORDER: {
-    INDEX: 'v1/delivery_orders',
-    BY_ID: {
-      INDEX: 'v1/delivery_orders/:id',
-      STATUS_HISTORY: 'v1/delivery_orders/:id/status_history',
-      QUOTE: 'v1/delivery_orders/:id/quota',
-      PAYMENT: 'v1/payment/delivery_orders/:id/payments',
-    },
-  },
   USER: {
     INDEX: 'v1/user',
-    ACCOUNT: {
-      INDEX: 'v1/user/account',
-      CONTACT_PERSONS: {
-        INDEX: 'v1/user/account/contact_persons',
-        BY_ID: 'v1/user/account/contact_persons/:id',
-      },
-      HEAD_OF_ORGANIZATION: {
-        INDEX: 'v1/user/account/head_of_organization',
-      },
-      HEAD_OF_ACCOUNTS: {
-        INDEX: 'v1/user/account/head_of_accounts',
-      },
-    },
     AUTH: {
       INDEX: 'v1/user/auth',
       SIGN_IN: 'v1/user/auth/sign_in',
@@ -49,22 +27,9 @@ export const API_ENDPOTINT = {
     },
     PASSWORD: {
       INDEX: 'v1/user/password',
-      // EDIT: 'v1/user/password/edit',
       RESET: {
         INDEX: 'v1/user/password/reset',
         EDIT: 'v1/user/password/reset/edit',
-      },
-    },
-  },
-  QUOTES: {
-    INDEX: 'v1/quotas',
-  },
-  PAYMENT: {
-    DELIVERY_ORDER: {
-      BY_ID: {
-        PAYMENTS: {
-          INDEX: 'v1/payment/delivery_orders/:deliveryOrderId/payments',
-        },
       },
     },
   },
