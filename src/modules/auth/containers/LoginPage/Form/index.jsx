@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { reduxForm } from 'redux-form';
 import cns from 'classnames';
 
-import FdsForm from '../../../../components/ui-kit/FdsForm';
-import FdsButton from '../../../../components/ui-kit/FdsButton';
+import FdsForm from '../../../../../components/ui-kit/FdsForm';
+import FdsButton from '../../../../../components/ui-kit/FdsButton';
 
 import cnNsp from './styles.module.scss';
 
