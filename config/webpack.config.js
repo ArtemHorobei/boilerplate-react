@@ -103,13 +103,21 @@ module.exports = function(webpackEnv) {
       },
     ].filter(Boolean);
     if (preProcessor) {
-      loaders.push({
-        loader: require.resolve(preProcessor),
+    loaders.push(
+      {
+        loader: require.resolve('sass-loader'),
+        options: {},
+      },
+      {
+        loader: require.resolve('sass-resources-loader'),
         options: {
-          sourceMap: isEnvProduction ? shouldUseSourceMap : isEnvDevelopment,
-        },
-      });
-    }
+          resources: [
+            paths.globalSass,
+          ]
+        }
+      }
+    );
+  }
     return loaders;
   };
 
