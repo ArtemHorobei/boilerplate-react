@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import { configureStore, initialRootState } from '../../store';
 import Routes from '../Routes';
-// import GlobalModalsContainer from '../GlobalModalsContainer';
+import GlobalModalsContainer from '../GlobalModalsContainer';
 //import ToastMessagesContainer from '../ToastMessagesContainer';
 
 import cnNsp from './styles.module.scss';
@@ -16,6 +16,7 @@ const AppRoot = () => (
       <BrowserRouter>
           <div className={cnNsp._root}>
               <Routes />
+              <GlobalModalsContainer />
           </div>
       </BrowserRouter>
   </Provider>

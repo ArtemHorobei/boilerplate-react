@@ -1,0 +1,32 @@
+._root {
+  &:global(.ui.modal.active) {
+    position: static;
+  }
+}
+
+.__sidebar {
+  :global(.modals.dimmer) &:global(.ui.scrolling.modal) {
+    margin: 0;
+  }
+
+  &:global(.ui.modal.active) {
+    @extend .layoutRoot;
+
+    border-radius: 0;
+    left: 0;
+    max-width: 500px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    @include media("<phoneLandscape") {
+      max-width: 100%;
+    }
+  }
+}
+
+._contentRoot {
+}
+
+._actionsRoot {
+}
