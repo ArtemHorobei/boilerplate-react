@@ -1,15 +1,15 @@
 import React from 'react';
 import { Card } from 'semantic-ui-react';
 
-import AuthPageLayout from '../../../../components/AuthPageLayout';
+import UnauthorizedPageLayout from '../../../../components/UnauthorizedPageLayout';
 import LoginForm from './Form';
 
 const LoginPage = () => (
-    <AuthPageLayout>
+    <UnauthorizedPageLayout>
         <Card>
             <LoginForm />
         </Card>
-    </AuthPageLayout>
+    </UnauthorizedPageLayout>
 );
 
 export default LoginPage;

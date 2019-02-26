@@ -4,7 +4,7 @@ import cns from 'classnames';
 
 import cnNsp from './styles.module.scss';
 
-const AuthPageLayout = ({
+const UnauthorizedPageLayout = ({
   className,
   children,
 }) => {
@@ -18,12 +18,12 @@ const AuthPageLayout = ({
   );
 };
 
-AuthPageLayout.propTypes = {
+UnauthorizedPageLayout.propTypes = {
   className: PropTypes.string,
 };
 
-AuthPageLayout.defaultProps = {
+UnauthorizedPageLayout.defaultProps = {
   className: '',
 };
 
-export default AuthPageLayout;
+export default UnauthorizedPageLayout;
