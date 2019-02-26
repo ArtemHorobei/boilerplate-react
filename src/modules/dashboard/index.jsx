@@ -1,13 +1,12 @@
 import React from 'react';
 import { Container, Segment } from 'semantic-ui-react';
 
-import Spinner from '../../components/Spinner';
+import CommonPageLayout from '../../components/CommonPageLayout';
 
-const Dashboard = () => <div>
+const Dashboard = () => <CommonPageLayout>
     <Container>
         <Segment>Pellentesque habitant morbi tristique senectus.</Segment>
-        <Spinner />
     </Container>
-</div>;
+</CommonPageLayout>;
 
 export default Dashboard;
