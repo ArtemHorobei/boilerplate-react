@@ -1,5 +1,5 @@
 import { createSendApiRequestSaga } from './index';
-import { API_ENDPOTINT, METHOD } from '../constants';
+import { API_ENDPOINT, METHOD } from '../constants';
 import { ApiActions } from '../actions';
 
 const userApiSaga = {
@@ -11,7 +11,7 @@ const userApiSaga = {
      */
     data => ({
       method: METHOD.POST,
-      url: API_ENDPOTINT.USER.AUTH.SIGN_IN,
+      url: API_ENDPOINT.USER.AUTH.SIGN_IN,
       data,
     }),
     ApiActions.user.auth.signIn,
@@ -31,7 +31,7 @@ const userApiSaga = {
      */
     data => ({
       method: METHOD.POST,
-      url: API_ENDPOTINT.USER.AUTH.SIGN_UP,
+      url: API_ENDPOINT.USER.AUTH.SIGN_UP,
       data,
     }),
     ApiActions.user.auth.signUp,
@@ -43,7 +43,7 @@ const userApiSaga = {
   fetchUserProfile: createSendApiRequestSaga(
     () => ({
       method: METHOD.GET,
-      url: API_ENDPOTINT.USER.PROFILE.INDEX,
+      url: API_ENDPOINT.USER.PROFILE.INDEX,
     }),
     ApiActions.user.fetchUserProfile,
     {
@@ -61,7 +61,7 @@ const userApiSaga = {
      */
     data => ({
       method: METHOD.PUT,
-      url: API_ENDPOTINT.USER.PROFILE.INDEX,
+      url: API_ENDPOINT.USER.PROFILE.INDEX,
       data,
     }),
     ApiActions.user.updateUserProfile,
@@ -78,7 +78,7 @@ const userApiSaga = {
      */
     data => ({
       method: METHOD.PUT,
-      url: API_ENDPOTINT.USER.PASSWORD.INDEX,
+      url: API_ENDPOINT.USER.PASSWORD.INDEX,
       data,
     }),
     ApiActions.user.password.change,
@@ -94,7 +94,7 @@ const userApiSaga = {
      */
     data => ({
       method: METHOD.POST,
-      url: API_ENDPOTINT.USER.PASSWORD.RESET.INDEX,
+      url: API_ENDPOINT.USER.PASSWORD.RESET.INDEX,
       data,
     }),
     ApiActions.user.password.reset,
@@ -111,7 +111,7 @@ const userApiSaga = {
      */
     params => ({
       method: METHOD.GET,
-      url: API_ENDPOTINT.USER.PASSWORD.RESET.EDIT,
+      url: API_ENDPOINT.USER.PASSWORD.RESET.EDIT,
       params,
     }),
     ApiActions.user.password.resetConfirm,
@@ -129,7 +129,7 @@ const userApiSaga = {
      */
     data => ({
       method: METHOD.PUT,
-      url: API_ENDPOTINT.USER.PASSWORD.RESET.INDEX,
+      url: API_ENDPOINT.USER.PASSWORD.RESET.INDEX,
       data,
     }),
     ApiActions.user.password.resetUpdate,

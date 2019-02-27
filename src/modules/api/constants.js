@@ -14,7 +14,7 @@ export const SORTING_DIRECTION = {
   DESC: 'desc',
 };
 
-export const API_ENDPOTINT = {
+export const API_ENDPOINT = {
   USER: {
     INDEX: 'v1/user',
     AUTH: {
