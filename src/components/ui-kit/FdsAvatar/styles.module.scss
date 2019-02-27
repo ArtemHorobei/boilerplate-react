@@ -1,0 +1,20 @@
+._root {}
+
+._avatar {
+  border-radius: 50%;
+
+  &Small {
+    width: converttoem(45);
+    height: converttoem(45);
+  }
+
+  &Medium {
+    width: converttoem(90);
+    height: converttoem(90);
+  }
+
+  &Large {
+    width: converttoem(150);
+    height: converttoem(150);
+  }
+}

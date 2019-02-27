@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cns from 'classnames';
 
+import Sidebar from '../Sidebar';
+
 import cnNsp from './styles.module.scss';
 
 const CommonPageLayout = ({
@@ -11,12 +13,12 @@ const CommonPageLayout = ({
   const cn = cns(className, cnNsp._root);
   return (
     <div className={cn}>
-      <div>Header</div>
+      <div className={cnNsp._header}>Header</div>
       <div className={cnNsp._main}>
-        <div>Sidebar</div>
+        <Sidebar />
         {children}
       </div>
-      <div>Footer</div>
+      <div className={cnNsp._footer}>Footer</div>
     </div>
   );
 };

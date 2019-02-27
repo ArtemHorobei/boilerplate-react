@@ -1,0 +1,20 @@
+._root {
+  color: black;
+  height: converttoem(56);
+  padding: 0 converttoem(24);
+  width: 100%;
+
+  &:hover {
+    color: $colorPrimary;
+  }
+}
+
+.__active {
+  background-color: $navTabActiveBgn;
+  border-radius: 8px;
+  color: $colorPrimary;
+}
+
+._text {
+  margin-left: converttoem(18);
+}

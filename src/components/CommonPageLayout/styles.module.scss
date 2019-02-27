@@ -1,8 +1,28 @@
-._root {}
+._root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
 
-._main {
+._header {
   align-items: center;
+  background-color: red;
   display: flex;
   justify-content: center;
-  height: 100%;
+  height: converttoem(70);
+}
+
+._main {
+  display: flex;
+  justify-content: space-between;
+  min-height: 85vh;
+}
+
+._footer {
+  align-items: center;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  height: converttoem(50);
 }
